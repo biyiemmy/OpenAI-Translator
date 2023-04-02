@@ -1,0 +1,33 @@
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #3b82f6;
+  color: #ffffff;
+  height: 100vh;
+}
+
+.container form label {
+  background: #023047;
+  color: #fff;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.container form input[type="radio"]:checked+label {
+  background: #f6c53b;
+  color: #fff;
+  font-weight: bold;
+}
+
+.container form input[type="radio"] {
+  display: none;
+}
