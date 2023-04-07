@@ -11,7 +11,7 @@ body {
 }
 
 .container form label {
-  background: #023047;
+  /* background: #023047; */
   color: #fff;
   height: 40px;
   width: 100px;
