@@ -1,28 +1,20 @@
-import { Navigate, Outlet } from "react-router-dom";
+import { Route, Navigate } from "react-router-dom";
 
-// const useAuth = () => {
-//   const user = { loggedIn: false };
-//   return user && user.loggedIn;
-// };
-
-const useAuth = () => {
-  const [user, setUser] = useState({ loggedIn: false });
-
-  const login = () => {
-    setUser({ loggedIn: true });
-  };
-
-  return { user, login };
-};
-
-// const ProtectedRoute = () => {
-//   const isAuth = useAuth();
-//   return isAuth ? <Outlet /> : <Navigate to="/main " />;
-// };
-
-const ProtectedRoute = ({ element: Element, ...rest }) => {
-  const isAuth = useAuth();
-  return isAuth ? <Element /> : <Navigate to="/register" replace />;
+const ProtectedRoute = ({ auth, component: Component, ...rest }) => {
+  return (
+    <Route
+      {...rest}
+      render={(props) => {
+        if (auth) return <Component {...props} />;
+        if (!auth)
+          return (
+            <Navigate
+              to={{ path: "/login", state: { from: props.location } }}
+            />
+          );
+      }}
+    />
+  );
 };
 
 export default ProtectedRoute;

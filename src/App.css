@@ -1,17 +1,18 @@
 * {
-  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  font-family: "Roboto", sans-serif;
   background-color: #3b82f6;
   color: #ffffff;
   height: 100vh;
 }
 
 .container form label {
-  /* background: #023047; */
+  background: #023047;
   color: #fff;
   height: 40px;
   width: 100px;
