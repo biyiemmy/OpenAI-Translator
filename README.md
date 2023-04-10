@@ -1,6 +1,6 @@
 # OpenAI Language Translator
 
-This is a simple translator built with React, CSS, and Tailwind CSS that uses the Open AI [chat completion API](https://platform.openai.com/docs/guides/completion) to translate from a given (English) language to another language.
+This is a simple translator built with React-JS, CSS, and Tailwind CSS that uses the Open AI [chat completion API](https://platform.openai.com/docs/guides/completion) to translate from a given (English) language to another language.
 
 <div style="text-align:center">
 <img src="" width="500">
